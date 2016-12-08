@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9476CBB5-91B4-4F97-9ED3-207401256B7F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LAFTests</RootNamespace>
+    <AssemblyName>LAFTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSpecs\RentalAgentFeeStructureFieldsVerification.feature.cs">
+      <DependentUpon>RentalAgentFeeStructureFieldsVerification.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSpecs\RentalAgentBiographyFieldsVerification.feature.cs">
+      <DependentUpon>RentalAgentBiographyFieldsVerification.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSpecs\EmergencyContactFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmergencyContactFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSpecs\LandlordInsuranceAdviceFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LandlordInsuranceAdviceFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSpecs\LanguagesRentalPropFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LanguagesRentalPropFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSpecs\RentalPostCodeSelectionFieldsVerification.feature.cs">
+      <DependentUpon>RentalPostCodeSelectionFieldsVerification.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSpecs\PropertiesPerPropManagerFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PropertiesPerPropManagerFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSpecs\PropertyMgmtTeamSizeFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PropertyMgmtTeamSizeFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSpecs\RentalBeginYourProposalFieldsVerification.feature.cs">
+      <DependentUpon>RentalBeginYourProposalFieldsVerification.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSpecs\InspectionFrequencyFieldsVerification.feature.cs">
+      <DependentUpon>InspectionFrequencyFieldsVerification.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSteps\EmergencyContactFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSteps\InspectionFrequencyFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSteps\LandlordInsuranceAdviceFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSteps\LanguagesRentalPropFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSteps\PropertiesPerPropManagerFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSteps\PropertyMgmtTeamSizeFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSteps\RentalAgentBiographyFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSteps\RentalAgentFeeStructureFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSteps\RentalBeginYourProposalFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForRent\AgentProposalForRentSteps\RentalPostCodeSelectionFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSpecs\AgentBiographyFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentBiographyFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSpecs\AgentFeeStructureFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentFeeStructureFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSpecs\BeginYourProposalFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BeginYourProposalFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSpecs\LanguagesFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LanguagesFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSpecs\PostCodeSelectionFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PostCodeSelectionFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSpecs\SaleAuthSizeSelectionFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaleAuthSizeSelectionFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSpecs\SaleMethodsFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaleMethodsFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSpecs\SalesProposalConfirmationFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesProposalConfirmationFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSpecs\SalesTeamSizeSelectionFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesTeamSizeSelectionFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSteps\AgentBiographyFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSteps\AgentFeeStructureFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSteps\BeginYourProposalFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSteps\LanguagesFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSteps\PostCodeSelectionFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSteps\SaleMethodsFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSteps\SalesAuthSizeSelectionFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSteps\SalesProposalConfirmationFieldsVerificationSteps.cs" />
+    <Compile Include="AgentProposalForSell\AgentProposalForSellSteps\SalesTeamSizeSelectionFieldsVerificationSteps.cs" />
+    <Compile Include="AgentRegistration\AgentRegistrationSpecs\AgencyDetailsFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgencyDetailsFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentRegistration\AgentRegistrationSpecs\AgentInterestsFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentInterestsFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentRegistration\AgentRegistrationSpecs\AgentPersonalDetailsFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentPersonalDetailsFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentRegistration\AgentRegistrationSpecs\AgentWelcomeFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentWelcomeFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentRegistration\AgentRegistrationSpecs\BeforeYouStartFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BeforeYouStartFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentRegistration\AgentRegistrationSpecs\KeyInfoFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KeyInfoFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentRegistration\AgentRegistrationSpecs\PrincipalDetailsFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrincipalDetailsFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentRegistration\AgentRegistrationSpecs\TermsAndConditionsFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TermsAndConditionsFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AgentRegistration\AgentRegistrationSteps\AgencyDetailsFieldsVerificationSteps.cs" />
+    <Compile Include="AgentRegistration\AgentRegistrationSteps\AgentInterestsFieldsVerificationSteps.cs" />
+    <Compile Include="AgentRegistration\AgentRegistrationSteps\AgentPersonalDetailsFieldsVerificationSteps.cs" />
+    <Compile Include="AgentRegistration\AgentRegistrationSteps\AgentWelcomeFieldsVerificationSteps.cs" />
+    <Compile Include="AgentRegistration\AgentRegistrationSteps\BeforeYouStartFieldsVerificationSteps.cs" />
+    <Compile Include="AgentRegistration\AgentRegistrationSteps\KeyInfoFieldsVerificationSteps.cs" />
+    <Compile Include="AgentRegistration\AgentRegistrationSteps\PrincipalDetailsFieldsVerificationSteps.cs" />
+    <Compile Include="AgentRegistration\AgentRegistrationSteps\TermsAndConditionsFieldsSteps.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyRegistration\PropertyRegistrationSpecs\AddressFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddressFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyRegistration\PropertyRegistrationSpecs\AgentQualityFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentQualityFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyRegistration\PropertyRegistrationSpecs\BedroomsFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BedroomsFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyRegistration\PropertyRegistrationSpecs\ContactedAgenciesFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContactedAgenciesFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyRegistration\PropertyRegistrationSpecs\CustomerDetailsFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerDetailsFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyRegistration\PropertyRegistrationSpecs\PropertyDescriptionFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PropertyDescriptionFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyRegistration\PropertyRegistrationSpecs\PropertyListingFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PropertyListingFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyRegistration\PropertyRegistrationSpecs\PropertyTypeFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PropertyTypeFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyRegistration\PropertyRegistrationSpecs\PropertyValueFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PropertyValueFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyRegistration\PropertyRegistrationSpecs\PropertyRegistrationEndToEnd.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PropertyRegistrationEndToEnd.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyRegistration\PropertyRegistrationSpecs\SpecificAgenciesFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpecificAgenciesFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyRegistration\PropertyRegistrationSpecs\ThankYouFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThankYouFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyRegistration\PropertyRegistrationSpecs\UrgencyFieldsVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UrgencyFieldsVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyRegistration\PropertyRegistrationSteps\AddressFieldsVerificationSteps.cs" />
+    <Compile Include="PropertyRegistration\PropertyRegistrationSteps\AgentQualityFieldsVerificationSteps.cs" />
+    <Compile Include="PropertyRegistration\PropertyRegistrationSteps\BedroomsFieldsVerificationSteps.cs" />
+    <Compile Include="PropertyRegistration\PropertyRegistrationSteps\ContactedAgenciesFieldsVerificationSteps.cs" />
+    <Compile Include="PropertyRegistration\PropertyRegistrationSteps\CustomerDetailsFieldsVerificationSteps.cs" />
+    <Compile Include="PropertyRegistration\PropertyRegistrationSteps\PropertyDescriptionFieldsVerificationSteps.cs" />
+    <Compile Include="PropertyRegistration\PropertyRegistrationSteps\PropertyListingFieldsVerificationSteps.cs" />
+    <Compile Include="PropertyRegistration\PropertyRegistrationSteps\PropertyTypeFieldsVerificationSteps.cs" />
+    <Compile Include="PropertyRegistration\PropertyRegistrationSteps\PropertyValueFieldsVerificationSteps.cs" />
+    <Compile Include="PropertyRegistration\PropertyRegistrationSteps\PropertyRegistrationEndToEndSteps.cs" />
+    <Compile Include="PropertyRegistration\PropertyRegistrationSteps\SpecificAgenciesFieldsVerificationSteps.cs" />
+    <Compile Include="PropertyRegistration\PropertyRegistrationSteps\ThankYouFieldsVerificationSteps.cs" />
+    <Compile Include="PropertyRegistration\PropertyRegistrationSteps\UrgencyFieldsVerificationSteps.cs" />
+    <Compile Include="TestInitialization.cs" />
+    <Compile Include="TestStartUp.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LAFTestAutomation\LAFTestAutomationFramework.csproj">
+      <Project>{c8904d64-0171-4e46-9f37-18072bfa032f}</Project>
+      <Name>LAFTestAutomationFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AgentProposalForRent\AgentProposalForRentSpecs\RentalAgentFeeStructureFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RentalAgentFeeStructureFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForRent\AgentProposalForRentSpecs\RentalAgentBiographyFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RentalAgentBiographyFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForRent\AgentProposalForRentSpecs\EmergencyContactFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EmergencyContactFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForRent\AgentProposalForRentSpecs\LandlordInsuranceAdviceFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LandlordInsuranceAdviceFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForRent\AgentProposalForRentSpecs\LanguagesRentalPropFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LanguagesRentalPropFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForRent\AgentProposalForRentSpecs\RentalPostCodeSelectionFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RentalPostCodeSelectionFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForRent\AgentProposalForRentSpecs\PropertiesPerPropManagerFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PropertiesPerPropManagerFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForRent\AgentProposalForRentSpecs\PropertyMgmtTeamSizeFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PropertyMgmtTeamSizeFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForRent\AgentProposalForRentSpecs\RentalBeginYourProposalFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RentalBeginYourProposalFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForRent\AgentProposalForRentSpecs\InspectionFrequencyFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>InspectionFrequencyFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForSell\AgentProposalForSellSpecs\AgentBiographyFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AgentBiographyFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForSell\AgentProposalForSellSpecs\AgentFeeStructureFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AgentFeeStructureFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForSell\AgentProposalForSellSpecs\BeginYourProposalFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BeginYourProposalFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForSell\AgentProposalForSellSpecs\LanguagesFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LanguagesFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForSell\AgentProposalForSellSpecs\PostCodeSelectionFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PostCodeSelectionFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForSell\AgentProposalForSellSpecs\SaleAuthSizeSelectionFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SaleAuthSizeSelectionFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForSell\AgentProposalForSellSpecs\SaleMethodsFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SaleMethodsFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForSell\AgentProposalForSellSpecs\SalesProposalConfirmationFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SalesProposalConfirmationFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentProposalForSell\AgentProposalForSellSpecs\SalesTeamSizeSelectionFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SalesTeamSizeSelectionFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentRegistration\AgentRegistrationSpecs\AgencyDetailsFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AgencyDetailsFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentRegistration\AgentRegistrationSpecs\AgentInterestsFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AgentInterestsFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentRegistration\AgentRegistrationSpecs\AgentPersonalDetailsFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AgentPersonalDetailsFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentRegistration\AgentRegistrationSpecs\AgentWelcomeFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AgentWelcomeFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentRegistration\AgentRegistrationSpecs\BeforeYouStartFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BeforeYouStartFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentRegistration\AgentRegistrationSpecs\KeyInfoFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>KeyInfoFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentRegistration\AgentRegistrationSpecs\PrincipalDetailsFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PrincipalDetailsFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AgentRegistration\AgentRegistrationSpecs\TermsAndConditionsFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TermsAndConditionsFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PropertyRegistration\PropertyRegistrationSpecs\AddressFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AddressFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="PropertyRegistration\PropertyRegistrationSpecs\AgentQualityFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AgentQualityFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="PropertyRegistration\PropertyRegistrationSpecs\BedroomsFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BedroomsFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="PropertyRegistration\PropertyRegistrationSpecs\ContactedAgenciesFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ContactedAgenciesFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="PropertyRegistration\PropertyRegistrationSpecs\CustomerDetailsFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CustomerDetailsFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="PropertyRegistration\PropertyRegistrationSpecs\PropertyDescriptionFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PropertyDescriptionFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="PropertyRegistration\PropertyRegistrationSpecs\PropertyListingFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PropertyListingFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="PropertyRegistration\PropertyRegistrationSpecs\PropertyTypeFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PropertyTypeFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="PropertyRegistration\PropertyRegistrationSpecs\PropertyValueFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PropertyValueFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="PropertyRegistration\PropertyRegistrationSpecs\PropertyRegistrationEndToEnd.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PropertyRegistrationEndToEnd.feature.cs</LastGenOutput>
+    </None>
+    <None Include="PropertyRegistration\PropertyRegistrationSpecs\SpecificAgenciesFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SpecificAgenciesFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="PropertyRegistration\PropertyRegistrationSpecs\ThankYouFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ThankYouFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="PropertyRegistration\PropertyRegistrationSpecs\UrgencyFieldsVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UrgencyFieldsVerification.feature.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\WebDriverIEDriver.2.45.0.0\tools\IEDriverServer-license.txt">
+      <Link>IEDriverServer-license.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\WebDriverIEDriver.2.45.0.0\tools\IEDriverServer.exe">
+      <Link>IEDriverServer.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

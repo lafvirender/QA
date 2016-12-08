@@ -1,0 +1,12 @@
+C:\LAFTestAutomation\LAFTestAutomation\LAFTestAutomation\bin\Debug\LAFTestAutomation.dll
+C:\LAFTestAutomation\LAFTestAutomation\LAFTestAutomation\bin\Debug\LAFTestAutomation.pdb
+C:\LAFTestAutomation\LAFTestAutomation\LAFTestAutomation\bin\Debug\HtmlAgilityPack.dll
+C:\LAFTestAutomation\LAFTestAutomation\LAFTestAutomation\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\LAFTestAutomation\LAFTestAutomation\LAFTestAutomation\bin\Debug\WebDriver.dll
+C:\LAFTestAutomation\LAFTestAutomation\LAFTestAutomation\bin\Debug\WebDriver.Support.dll
+C:\LAFTestAutomation\LAFTestAutomation\LAFTestAutomation\bin\Debug\HtmlAgilityPack.pdb
+C:\LAFTestAutomation\LAFTestAutomation\LAFTestAutomation\bin\Debug\HtmlAgilityPack.xml
+C:\LAFTestAutomation\LAFTestAutomation\LAFTestAutomation\bin\Debug\WebDriver.xml
+C:\LAFTestAutomation\LAFTestAutomation\LAFTestAutomation\bin\Debug\WebDriver.Support.xml
+C:\LAFTestAutomation\LAFTestAutomation\LAFTestAutomation\obj\Debug\LAFTestAutomation.dll
+C:\LAFTestAutomation\LAFTestAutomation\LAFTestAutomation\obj\Debug\LAFTestAutomation.pdb
